@@ -83,10 +83,11 @@ def get_maze_size():
     while ((cols * cols) < total_drones):
         cols += 1
     
-    lines = (total_drones + cols - 1) // cols
-
-    maze_size = (farm_size * num_unlocked(Unlocks.Mazes)) // cols
-    #maze_size = 4
+    lines = (total_drones + cols - 1) // cols 
+    #print(cols)
+    print(num_unlocked(Unlocks.Mazes))
+    maze_size = (farm_size * num_unlocked(Unlocks.Mazes)) // cols + 1
+    #maze_size = 1
     return maze_size
 
 
@@ -100,6 +101,7 @@ def func_drone(i):
     do_a_flip()
     
     maze_size = get_maze_size()
+    
     
     while True:
         
