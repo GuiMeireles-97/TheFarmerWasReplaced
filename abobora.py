@@ -32,7 +32,7 @@ def plantar():
         arar(Grounds.Soil)
         harvest()
         plant(Entities.Pumpkin)
-        
+        #use_item(Items.Fertilizer)
 
 def contagem_replanta():
     # posicao = [get_pos_x(), get_pos_y()]
@@ -43,6 +43,7 @@ def contagem_replanta():
 
     else:
         plant(Entities.Pumpkin)
+        use_item(Items.Fertilizer)
 
     return q_abobora
 

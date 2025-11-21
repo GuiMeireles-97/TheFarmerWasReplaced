@@ -30,6 +30,7 @@ def resolver_labririnto(x, y, substancia):
     index = 0
     tesouro = Entities.Treasure
     direcoes = [North, East, South, West]
+    
     while not quant_substancia == (substancia + 1):
         pos_atual_x = get_pos_x()
         pos_atual_y = get_pos_y()
