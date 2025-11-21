@@ -40,10 +40,11 @@ def contagem_replanta():
         
         global q_abobora
         q_abobora += 1
+        
 
     else:
         plant(Entities.Pumpkin)
-        use_item(Items.Fertilizer)
+        #use_item(Items.Fertilizer)
 
     return q_abobora
 

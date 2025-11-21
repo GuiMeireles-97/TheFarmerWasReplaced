@@ -1,6 +1,6 @@
 dict_items = {Items.Hay:Entities.Grass, Items.Wood:Entities.Tree,
-Items.Carrot:Entities.Carrot, Items.Pumpkin:Entities.Pumpkin,
- Items.Power:Entities.Sunflower}
+Items.Carrot:Entities.Carrot,}# Items.Pumpkin:Entities.Pumpkin}
+# Items.Power:Entities.Sunflower}
 
 posicao_inicial = [0, 0]
 
@@ -15,7 +15,7 @@ def Arar_Terra(solo):
 
 def verificar_inventario(dict_items):
     quantidade_itens = 0
-    quantidade_minima = 1000000
+    quantidade_minima = 5000000
     
     for item in dict_items:
         quantidade_itens = num_items(item)
@@ -28,7 +28,7 @@ def verificar_inventario(dict_items):
         
 def plantar(item):
     
-   def abobora():
+   #def abobora():
 
 
    # for i in range(get_world_size()):
@@ -37,7 +37,7 @@ def plantar(item):
             # if posicao_atual == posicao_inicial:
             #     return posicao_atual
             
-            if can_harvest() and (get_entity_type != Entities.Pumpkin):
+            if can_harvest() and (get_entity_type() != Entities.Pumpkin):
                 harvest()
             
             regar()
@@ -77,6 +77,7 @@ while True:
     
     item_faltante = verificar_inventario(dict_items)
     item_faltante = dict_items[item_faltante]
+    #item_faltante = Entities.Tree
     for i in range(get_world_size()):
         
         def plantar_item_faltante():

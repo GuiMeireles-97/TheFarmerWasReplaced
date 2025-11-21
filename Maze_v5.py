@@ -4,7 +4,7 @@ farm_size = get_world_size()
 total_drones = max_drones()
 
 def reutiliza():
-    substance = 2 #Alterar para quantidade de vezes que o labirinto deve ser reutilizado
+    substance = 1 #Alterar para quantidade de vezes que o labirinto deve ser reutilizado
     return substance
 
 
@@ -85,7 +85,7 @@ def get_maze_size():
     
     lines = (total_drones + cols - 1) // cols
 
-    maze_size = farm_size // cols
+    maze_size = (farm_size * num_unlocked(Unlocks.Mazes)) // cols
     #maze_size = 4
     return maze_size
 
